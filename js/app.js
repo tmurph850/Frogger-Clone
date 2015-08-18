@@ -72,8 +72,8 @@ Enemy.prototype.update = function(dt) {
     rect1.x + rect1.width > rect2.x &&
     rect1.y < rect2.y + rect2.height &&
     rect1.height + rect1.y > rect2.y) {
-    player.reset();
-    score-=2;
+    this.reset();
+    score -= 2;
     }
 };
 
