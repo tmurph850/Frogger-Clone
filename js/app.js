@@ -57,7 +57,7 @@ Enemy.prototype.update = function(dt) {
     if(this.x < 505) {
         this.x += liveMove;
     } else {
-        this.x = -100 
+        this.x = -100;
         this.y = this.newY();
         if(score > 20) {this.move = this.hardMove();
         } else {
@@ -66,8 +66,8 @@ Enemy.prototype.update = function(dt) {
     }
     // rect1 and rect2 create a bounding box for the enemies and the player respectively.
     // the if statement checks for a collision between these boxes and restarts our player if any collision occurs.
-    var rect1 = {x: this.x, y: this.y, width: 50, height: 30}
-    var rect2 = {x: player.x, y: player.y, width: 60, height: 30}
+    var rect1 = {x: this.x, y: this.y, width: 50, height: 30};
+    var rect2 = {x: player.x, y: player.y, width: 60, height: 30};
     if (rect1.x < rect2.x + rect2.width &&
     rect1.x + rect1.width > rect2.x &&
     rect1.y < rect2.y + rect2.height &&
@@ -103,8 +103,8 @@ Player.prototype.handleInput = function(key) {
 
     // Resets our player back at the start upon reaching the river, also updates our score.
     if (key === 'up' && (this.y - this.ymove) < -38) {
-    player.reset();
-    score+= 2;
+    this.reset();
+    score += 2;
     }
 };
 
@@ -159,8 +159,8 @@ Gems.prototype.newMove = function() {
 // The if statement tells our enemy to keep moving as long as it has not crossed outside the bounds of the canvas.
 // else restarts our gem if it reaches the right bounds of the screen.
 Gems.prototype.update = function(dt) {
-    var rect1 = {x: this.x, y: this.y, width: 50, height: 50}
-    var rect2 = {x: player.x, y: player.y, width: 60, height: 50}
+    var rect1 = {x: this.x, y: this.y, width: 50, height: 50};
+    var rect2 = {x: player.x, y: player.y, width: 60, height: 50};
     var liveMove = this.move * dt;
     if(this.x < 505) {
         this.x += liveMove;
@@ -179,7 +179,7 @@ Gems.prototype.update = function(dt) {
      score++;
      this.x = -100;
      this.y = this.newY();
-     this.move = this.newMove()
+     this.move = this.newMove();
     }
 };
 // Draws our gems on the screen.
@@ -197,7 +197,7 @@ function drawScore() {
     ctx.fillText("Score: "+score, 208, 561);
     ctx.fillStyle = "black";
     ctx.fillText("Score: "+score, 208, 562);
-};
+}
 
 // Now instantiate your objects
 // Place all enemy objects in an array called allEnemies
@@ -220,7 +220,7 @@ document.addEventListener('keyup', function(e) {
         38: 'up',
         39: 'right',
         40: 'down'
-};
+    };
 
     player.handleInput(allowedKeys[e.keyCode]);
 
