@@ -1,7 +1,12 @@
-Just open up the index.html file and you're ready to play.
+# Installing and running the game
 
-Use the arrow keys to move, dodge the enemies, collect gems, and try to reach the river!
+You may clone this repository with the link provided next to the dropdown labeled HTTPS,
+you can also download it with the Download ZIP button. Once installed locally just open
+up the index.html file within the main directory. If you do not wish to install the project
+locally feel free to check out this live [link](http://tmurph850.github.io/frontend-nanodegree-arcade-game/)
 
-Hard mode kicks in when you have a score above 20!
+## Playing the game
+Use the arrow keys to move, dodge the bugs, collect gems and try to reach the river!
+Hard mode kicks in when you reach a score above 20!
 
-Working link here http://tmurph850.github.io/Frogger-Clone/
+
